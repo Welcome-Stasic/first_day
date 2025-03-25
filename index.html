@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Станислав</title>
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Прелоадер-->
+    <div class="loader-container" id="loaderContainer">
+        <div class="lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <img src="assets/КОД.png" alt="код">
+        <div class="percentage" id="percentage">0%</div>
+        <div class="loader-line">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    </div>
+    <!--Основная часть-->
+    <div class="content" id="content" style="display:none;">
+        <section id="myName">
+            <img class="rubik1 show" src="assets/рубик1.png" alt="кубик">
+            <img class="rubik2" src="assets/рубик2.png" alt="кубик">
+            <div class="name_container">
+                <div class="name">
+                    <span ALIGN="center">Станислав Васильевич</span>
+                    <div class="surname">Глумов</div>
+                </div>
+                <div class="groupe">
+                    <span ALIGN="center">Frontend|Backend разработка</span>
+                    <button><a class="link_profile" href="#profile">В
+                            профиль</a></button>
+                </div>
+            </div>
+        </section>
+        <section id="profile">
+            <div class="profile_container">
+                <div class="profile_avatar-container">
+                    <img src="assets/аватарка.jpg" alt="ава">
+                    <div class="age">
+                        18 лет
+                    </div>
+                    <span>
+                        Глумов Станислав
+                    </span>
+                </div>
+                <div class="profile_discribe-container">
+                    <div class="title-group">
+                        <span>Frontend|Backend разработка</span>
+                        <span>1 курс</span>
+                    </div>
+                    <div class="discribe">
+                        Этот 18-летний программист — молодой кодер, который
+                        ещё не успел научиться правильно
+                        засыпать, но уже прекрасно умеет разбираться в
+                        логике сложных алгоритмов. Он учится в школе
+                        программирования и считает, что баги — это просто
+                        недооценённые особенности программ. Его
+                        любимая фраза: «Это не ошибка, это фича!» Он уверен,
+                        что код должен быть чистым, а кофе —
+                        горячим. Время от времени его лучший друг — Google,
+                        а его любимое хобби — дебаггинг. Для
+                        него Python — это не змея, а просто язык
+                        программирования, а JavaScript — это загадка
+                        вселенной.
+                    </div>
+                </div>
+                <div class="ачивки">
+                    <span>Награды</span>
+                    <div class="картинки_ачивки">
+                        <div class="first-column">
+                            <img src="assets/ачивка1.png" alt="ачивка">
+                            <img src="assets/ачивка2.png" alt="ачивка">
+                            <img src="assets/ачивка3.png" alt="ачивка">
+                            <img src="assets/ачивка4.png" alt="ачивка">
+                            <img src="assets/ачивка5.png" alt="ачивка">
+                        </div>
+                        <div class="second-column">
+                            <img src="assets/ачичвка6.png" alt="ачивка">
+                            <img src="assets/ачивка7.png" alt="ачивка">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="points">
+            <div class="point_container">
+                <div class="backend">
+                    <span>BACKEND</span>
+                    <div class="surname">130 балл</div>
+                </div>
+                <div class="frontend">
+                    <span>FRONTEND</span>
+                    <div class="surname"> 200 балл</div>
+                </div>
+                <button class="skills" id="skills">Навыки</button>
+            </div>
+        </section>
+        <section class="skills-section">
+            <h2>Я очень остал и мне охото спать, так что мне лень придумывать
+                какие-либо навыки, так что тут будет это письмо</h2>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                let href = this.getAttribute('href').substring(
+                    1);
+                const scrollTarget = document.getElementById(
+                    href);
+                const topOffset = 70;
+                const elementPosition = scrollTarget
+                    .getBoundingClientRect().top;
+                const offsetPosition = elementPosition -
+                    topOffset;
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
